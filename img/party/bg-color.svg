@@ -1,0 +1,17 @@
+<svg width="1728" height="958" viewBox="0 0 1728 958" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes partyLights {
+      0% { fill: #AD35E7; } /* Red */
+      25% { fill: #00FF00; } /* Green */
+      50% { fill: #0000FF; } /* Blue */
+      75% { fill: #FF00FF; } /* Magenta */
+      100% { fill: #7447a7; } /* Yellow */
+    }
+
+    .party {
+      animation: partyLights 50s linear infinite;
+      fill-opacity:0.85 !important;
+    }
+  </style>
+  <rect class="party" width="1728" height="958" fill="#AD35E7" fill-opacity="0.9"/>
+</svg>
