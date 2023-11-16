@@ -1760,6 +1760,9 @@ table,td,tr,th{
     line-height: 219%; /* 35.04px */
     letter-spacing: 0.72px;
 }
+.yu-terms-wrapper .content section{
+    margin-bottom: 30px;
+}
 .yu-terms-wrapper .content p{
     color: currentColor;
 }

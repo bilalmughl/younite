@@ -172,6 +172,11 @@ $(document).ready(function() {
         }
     });
     $("a[href^='#']").on('click', function(event) {
+        // Check if the clicked element has the excluded class
+        if ($(this).is('.yu-asidebar-container li a')) {
+            return; // Do nothing if it has the excluded class
+        }
+    
         event.preventDefault();
         var targetId = $(this).attr('href').substring(1); // Remove the '#' from the href
         var target = $('#' + targetId);
@@ -182,33 +187,5 @@ $(document).ready(function() {
             }, 800); // Adjust the speed as needed
         }
     });
-    
-    
-
-    $(window).scroll(function () {
-        // Get the current vertical scroll position
-        var scrollPosition = $(this).scrollTop();
-    
-        // Iterate through each section
-        $('.content h2').each(function () {
-            var target = $(this).offset().top;
-    
-            // Log the ID for debugging
-            console.log('Checking h2:', this.id);
-    
-            // Check if the scroll position is within the bounds of the section
-            if (target <= scrollPosition && target + $(this).outerHeight() > scrollPosition) {
-                // Remove the 'active' class from all links
-                $('.yu-asidebar-container ul li a').removeClass('active');
-    
-                // Add the 'active' class to the corresponding link
-                var linkHref = '#' + $(this).attr('id');
-                $('.yu-asidebar-container ul li a[href="' + linkHref + '"]').addClass('active');
-            }
-        });
-    });
-    
-    console.log('Checking h2:', this.id);
-
   
 });
