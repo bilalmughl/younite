@@ -763,8 +763,32 @@ main {
     letter-spacing: -0.72px;
     padding: 66px 0;
 }
-
-
+.yu-copyright .container{
+    max-width: 1240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width: 450px){
+    .yu-copyright .container{
+        flex-direction: column;
+        gap: 20px;
+    } 
+}
+.yu-copyright .nav{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+.yu-copyright .nav a{
+    color: #5F6D7E;
+    font-size: inherit;
+}
+.yu-copyright .nav a:hover{
+    color: #11B4E2;
+}
 
 
 
