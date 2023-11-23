@@ -187,5 +187,28 @@ $(document).ready(function() {
             }, 800); // Adjust the speed as needed
         }
     });
-  
+  // Attach the scroll event to the window or any other scrolling container
+    $('.yu-terms-wrapper-scroll').on('scroll', function() {
+        // Get the current scroll position
+        var scrollPosition = $(this).scrollTop();
+    
+        // Iterate through each section element in the terms-wrapper
+        $('.yu-terms-wrapper-scroll [id]').each(function() {
+            // Get the position of the current section element
+            var sectionPosition = $(this).offset().top;
+    
+            // Check if the scroll position is 100px or more from the top
+            if (scrollPosition >= sectionPosition - 100) {
+            // Get the id value of the current section element
+            var idValue = $(this).attr('id');
+    
+            // Remove the "active" class from all <a> elements in the asidebar-container
+            $('.yu-asidebar-container ul li a').removeClass('active');
+    
+            // Add the "active" class to the corresponding <a> element
+            $('.yu-asidebar-container ul li a[href="#' + idValue + '"]').addClass('active');
+            }
+        });
+    
+    });
 });
